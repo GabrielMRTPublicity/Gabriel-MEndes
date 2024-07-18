@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>LOGIN - ATITUDE TURISMO</title>
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- login page start-->
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 p-0">
+                <div class="login-card login-dark">
+                    <div>
+                        <div><a class="logo" href="index.html"><img class="img-fluid for-dark" src="../assets/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-light" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+                        <div class="login-main">
+                            <form class="theme-form" method="POST" id="loginForm">
+                                <h4>Faça login na conta</h4>
+                                <p>Digite seu e-mail e senha para fazer login</p>
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label">E-mail</label>
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="Test@gmail.com" autocomplete="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha" class="col-form-label">Senha </label>
+                                    <div class="form-input position-relative">
+                                        <input class="form-control" type="password" id="senha" name="senha" autocomplete="senha">
+                                        <div class="show-hide"> <span class="show"></span></div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <div class="checkbox p-0">
+                                        <input id="lembrar-senha" name="lembrar-senha" type="checkbox">
+                                        <label for="lembrar-senha" class="text-muted" for="lembrar-senha">Lembrar senha</label>
+                                    </div><a class="link" href="esqueceu-senha.html">Esqueceu sua senha?</a>
+                                    <div class="text-end mt-3">
+                                        <button class="btn btn-primary btn-block w-100" id="login" type="submit">Entrar</button>
+                                    </div>
+                                </div>
+                                <p class="mt-4 mb-0 text-center">Não tem conta?<a class="ms-1" href="../cadastrar/">Criar uma conta</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+        <script src="../assets/js/config.js"></script>
+        <script src="../assets/js/script.js"></script>
+        <script src="../assets/js/sweet-alert/sweetalert2.all.min.js"></script>
+        <script src="../assets/js/pages/login.js"></script>
+    </div>
+</body>
+
+</html>

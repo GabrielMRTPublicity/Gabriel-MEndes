@@ -1,0 +1,452 @@
+/* light */
+.div-popup {
+    margin-top: 20px;
+}
+
+.vincular_evento {
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 1px solid #007bff;
+    color: #fff;
+    background: #007bff;
+    font-size: 15px;
+    transition: background-color 0.5s, color 0.8s, border-color 1s;
+}
+
+.vincular_evento:hover {
+    border-color: #007bff;
+    color: #007bff;
+    background: transparent;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 1% auto auto auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+
+.close {
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    width: 40px;
+    line-height: 38px;
+    height: 40px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+    transition: background-color 0.5s, color 0.8s, border-color 1s;
+}
+
+.close:hover {
+    color: red !important;
+    background: transparent;
+    border-color: red;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.flex-popup {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content button {
+    background: transparent;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition: background-color 0.7s, color 0.5s, border-color 0.7s;
+}
+
+#myModal form {
+    background-color: #efefef;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#mostrar_instituicoes,
+#mostrar_eventos {
+    border: 1px solid #efefef;
+    background: #efefef;
+}
+
+
+#filtro-outros,
+#filtro-escolar {
+    border: 1px solid #efefef;
+    background: #fff;
+}
+
+#mostrar_instituicoes:hover,
+#mostrar_eventos:hover,
+#filtro-outros:hover,
+#filtro-escolar:hover {
+    background: #007bff;
+    color: #fff;
+    border: 1px dashed white;
+}
+
+#mostrar_instituicoes.active,
+#mostrar_eventos.active,
+#filtro-outros.active,
+#filtro-escolar.active {
+    background: #007bff;
+    color: #fff;
+    border: 1px dashed white;
+}
+
+#div_evento,
+#div_instituicao {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    display: block;
+    opacity: 1 !important;
+}
+
+#myModal table {
+    width: 100%;
+}
+
+#eventos-table,
+#instituicoes-table {
+    margin-top: 15px;
+    background: #007bff33;
+    border: solid 1px #007bff;
+}
+
+#myModal thead {
+    height: 40px;
+}
+
+.id_col {
+    border: 1px solid #007bff;
+    width: 20%;
+    height: 30px;
+}
+
+.titulo_col {
+    border: 1px solid #007bff;
+    width: 60%;
+    height: 30px;
+}
+
+.titulo_col2 {
+    border: 1px solid #007bff;
+    width: 20%;
+    height: 30px;
+}
+
+#mostrar-instituicoes-table,
+#mostrar-eventos-table {
+    display: none;
+    margin-top: 20px;
+    background: #cbe4fe;
+}
+
+#mostrar-eventos-tbody tr td,
+#mostrar-instituicoes-tbody tr td {
+    border: solid 1px #007bff;
+    border-top: none;
+}
+
+#mostrar-instituicoes-table,
+#mostrar-eventos-table {
+    position: relative;
+}
+
+#mostrar-instituicoes-table::before,
+#mostrar-eventos-table::before {
+    content: "▼";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+    color: #ffffff;
+    background: #007bff;
+    width: 100%;
+}
+
+#eventos-tbody tr:hover,
+#instituicoes-tbody tr:hover {
+    background: #fff;
+}
+
+#myModal .titulo-table {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-content #add_vinculo {
+    color: green !important;
+    border-color: green;
+}
+
+.modal-content #remover_vinculo {
+    color: red !important;
+    border-color: red;
+}
+
+.modal-content #add_vinculo:hover {
+    color: #fff !important;
+    background-color: green;
+    border-color: green;
+}
+
+.modal-content #remover_vinculo:hover {
+    color: #fff !important;
+    background-color: red;
+    border-color: red;
+}
+
+
+.modal-content p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #484848;
+    margin: 35px 0;
+}
+
+.escolha {
+    color: #007bff !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+    font-size: 14px !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.modal-content .col-6 select {}
+
+/* Estiliza o contêiner do select */
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Estiliza o próprio select */
+.select-container select {
+    width: 100%;
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.select-container::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.alinhar_add {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.alinhar_ex {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.modal-content p.titulo-vinculo {
+    color: #007bff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.modal-content p.titulo-vinculo span {
+    font-size: 10px;
+    color: #8b8b8b;
+}
+
+.filtro {
+    display: flex;
+}
+
+.filtro label {
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.filtro select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #007bff;
+    margin-right: 10px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 5px;
+    padding: 2px;
+    color:#000;
+}
+
+.instituicao-row {
+    transition: background 0.5s;
+}
+
+.instituicao-row.active {
+    background: #fff;
+}
+
+/* dark */
+
+.dark-only #mostrar_instituicoes,
+.dark-only #mostrar_eventos {
+    border: 1px solid #efefef;
+    background: #202020;
+    color: #fff;
+}
+
+.dark-only #mostrar_instituicoes:hover,
+.dark-only #mostrar_eventos:hover {
+    background: #007bff;
+    color: #fff;
+    border: 1px dashed white;
+}
+
+.dark-only #mostrar_instituicoes.active,
+.dark-only #mostrar_eventos.active {
+    background: #007bff;
+    color: #fff;
+    border: 1px dashed white;
+}
+
+.dark-only .id_col {
+    border: 1px solid #007bff;
+    width: 20%;
+    height: 30px;
+}
+
+.dark-only .titulo_col {
+    border: 1px solid #007bff;
+    width: 60%;
+    height: 30px;
+}
+
+.dark-only .titulo_col2 {
+    border: 1px solid #007bff;
+    width: 20%;
+    height: 30px;
+}
+
+.dark-only #myModal .titulo-table {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.dark-only #eventos-table,
+.dark-only #instituicoes-table {
+    margin-top: 15px;
+    background: #52525233;
+    border: solid 1px #ffffff;
+    color: #fff;
+}
+
+.dark-only #eventos-tbody tr:hover,
+.dark-only #instituicoes-tbody tr:hover {
+    background: #22242b;
+}
+
+.dark-only #mostrar-instituicoes-table,
+.dark-only #mostrar-eventos-table {
+    display: none;
+    margin-top: 20px;
+    background: #2b2d32;
+    color: #fff;
+}
+
+.dark-only .filtro select {
+    color: #fff !important;
+}
+
+.dark-only .filtro select option {
+    color: #000 !important;
+}
+
+.dark-only #myModal form label {
+    color: #000000;
+}
+
+.dark-only .instituicao-row.active {
+    background: #22242b;
+}
+
+/* responsividade */
+@media only screen and (max-width: 991px) {
+
+    .alinhar_add,
+    .alinhar_ex {
+        justify-content: space-around;
+    }
+
+    #evento {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flex-popup {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .select-container select {
+        font-size: 14px;
+    }
+
+    .select-container::after {
+        right: 15px;
+        font-size: 15px;
+    }
+
+    .modal-content p {
+        font-size: 15px;
+    }
+}

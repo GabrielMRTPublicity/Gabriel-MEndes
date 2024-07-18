@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --black: rgb(0 0 0);
+  --dark-navy: rgb(26 28 60);
+  --navy: rgb(45 54 77);
+  --navy-bg: rgb(86 94 115);
+  --gray: rgb(167 167 167);
+  --white: rgb(255 255 255);
+  --yellow: rgb(255 181 0);
+  --light-yellow: rgb(255 209 98);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, .pop{
+  font-family: "Poppins", sans-serif !important;
+}
+
+.tt{
+  font-size: 36px;
+}
+
+.tt2{
+  font-size: 60px;
+}
+
+.cor-1{
+  color: #106B6F;
+}
+
+.logo {
+    height: 65px;
+}
+
+.menu-header {
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+  }
+
+.img-menu{
+    background: url('../img/fundo-menu-maior-2.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-item {
+    padding: 5px 15px 5px 15px !important;
+    font-size:20px;
+    border-radius: 50px;
+  }
+
+  .nav-link {
+    color: #fff;
+    padding: 5px 15px 5px 15px !important;
+    border-radius: 50px;
+  }
+
+  nav {
+    background-color: #ffffff;
+    padding: 5px 15px 5px 15px !important;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 15px 5px 15px !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 0px;
+    padding: 5px 15px 5px 15px !important;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 5px 15px 5px 15px !important;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 5px 15px 5px 15px !important;
+    font-size:20px;
+    color: #000000 !important;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .nav-link:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, 0);
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+  }
+
+  .nav-link:focus {
+    color: var(--bs-nav-link-hover-color);
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  .pad-top{
+    padding-top: 9rem !important;
+  }
+
+  .button {
+    font-size:20px;
+    border-radius:40px;
+    color:#ffffff;
+    background-color:#3DADA7;
+    outline:none;
+    border:none;
+    cursor:pointer;
+    display:inline-block;
+    text-decoration: none;
+    transition: .4s;
+    }
+    
+    button {
+      background-image: url("../img/Group 4.png"),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: calc(-20% - 100px), calc(100% - 12px);
+      cursor: pointer;
+      display: block;
+      position: relative;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 12px 24px 12px 12px;
+      width: 250px;
+      text-align: center;
+      overflow: hidden;
+      letter-spacing: 0.08em;
+      text-shadow: 0 0 1px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 20%);
+      white-space: nowrap;
+      transition: background-position 2s ease;
+      font-family: "Poppins", sans-serif !important;
+      font-weight: 400;
+      font-style: normal;
+    
+      &:hover {
+        background-position: calc(190% - 90px), calc(100% + 100px);
+      }
+    }
+
+    .button:hover {
+      color:#106B6F;
+      background-color:#94CFC9;
+    }
+
+    waves {
+      position:relative;
+      width: 100%;
+      height:15vh;
+      margin-bottom:-7px; /*Fix for safari gap*/
+      min-height:100px;
+      max-height:150px;
+    }
+
+    /* Animation */
+
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    }
+    .parallax > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px,0,0);
+          }
+      100% { 
+        transform: translate3d(85px,0,0);
+          }
+      }
+
+    /*Responsive*/
+    @media (max-width: 768px) {
+       .waves {
+         height:40px;
+         min-height:40px;
+       }
+     }
+

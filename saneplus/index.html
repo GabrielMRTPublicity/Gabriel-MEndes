@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Minha Página</title>
+</head>
+<body>
+    <header class="container-sm">
+       
+            <div class="container-fluid menu-header">
+            <nav class="navbar navbar-expand-lg navbar-light img-menu">
+              <div class="collapse navbar-collapse">
+                <a class="navbar-brand" href="#"><img src="img/logo-saneplus.png" class="logo" alt="Descrição da imagem"></a>
+              </div>
+              <div class="collapse navbar-collapse"></div>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#inicio">Menu 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Menu 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Menu 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Menu 4</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            </div>
+    </header>
+    
+    <main>
+        <section class="container mt-4" id="inicio" >
+            <div class="row g-4 text-center">
+                <div class="col-sm-6 col-md-6 text-center">
+                  <img src="img/saneplus-banner 2.png" class="img-fluid rounded" alt="Menino com a garrafa dágua na mão">
+                </div>
+                <div class="col-6 col-md-6 text-start pad-top">
+                  <h1 class="cor-1 tt"><strong>Estação de Tratamento de Água</strong></h1>
+                  <h2 class="fw-bold cor-1 tt2">100% Automatizada</h2>
+                  <p class="h4">A garantia que a população necessita para água segura e confiável todos os dias.</p>
+                  <article>                  
+                    <button href="seulink" class="button mt-5">Saiba Mais</button>
+                  </article>
+                </div>
+              </div>
+              <div class="row" style="border-radius: 0px 0px 50px 50px !important;">
+                <svg class="waves" style="border-radius: 0px 0px 50px 50px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill="#94CFC9" />
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="#3DADA7" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="#106B6F" />
+                </g>
+                </svg>
+                </div>
+        </section>
+    </main>
+    
+    
+
+
+    <footer>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.js"></script>
+
+    <script>
+        // Seleciona todos os links de navegação
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        // Adiciona um event listener de scroll
+        window.addEventListener('scroll', function() {
+        // Obtém a posição atual da página
+        const currentPosition = window.pageYOffset;
+
+        // Itera sobre os links de navegação
+        navLinks.forEach(function(link) {
+        // Obtém o alvo do link
+        const target = document.querySelector(link.getAttribute('href'));
+
+        // Verifica se o alvo está visível na tela
+        if (target && currentPosition >= target.offsetTop - 100 && currentPosition < target.offsetTop + target.offsetHeight) {
+        // Adiciona a classe 'active' ao link ativo
+        link.classList.add('active');
+      } else {
+        // Remove a classe 'active' dos outros links
+        link.classList.remove('active');
+    }
+  });
+});
+
+    </script>
+
+    <script>
+        var $doc = $('html, body');
+           $('.scrollSuave').click(function() {
+              $doc.animate({
+                  scrollTop:$($.attr(this,'href')).offset().top
+              }, 500);        
+              return false;
+          });
+    </script>
+</body>
+</html>
