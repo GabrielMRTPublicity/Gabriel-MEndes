@@ -39,52 +39,51 @@
         </section>
         <section class="contact-area pb-100 form-contact" id="contato">
             <div class="container">
-                <form class="contactForm2">
+                <form method="POST" class="contactForm2">
                     <div class="row">
                         <h2 class="title-destino">FALE CONOSCO</h2>
                         <h3 class="sub-title-destino">Vamos planejar juntos a sua próxima grande aventura!<br><br></h3>
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
-                                <input type="text" name="nome" id="nome" autocomplete="nome" placeholder="Nome" class="form-control" required data-error="Este campo é obrigatório." />
+                                <input type="text" name="nome" id="nome" autocomplete="nome" placeholder="Nome" class="form-control" />
                                 <div class="help-block with-errors"></div>
                                 <br>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail" class="form-control" required data-error="Este campo é obrigatório." />
+                                <input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail" class="form-control" />
                                 <br>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
-                                <input type="text" name="whatsapp" id="whatsapp" autocomplete="whatsapp" placeholder="WhatsApp" required data-error="Este campo é obrigatório." class="cel form-control" maxlength="15" />
+                                <input type="text" name="whatsapp" id="whatsapp" autocomplete="whatsapp" placeholder="WhatsApp"  class="cel form-control" maxlength="15" />
                                 <div class="help-block with-errors"></div>
                                 <br>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
-                                <input type="text" name="telefone" id="telefone" autocomplete="telefone" placeholder="Telefone" class="cel form-control" maxlength="14" required data-error="Este campo é obrigatório." />
+                                <input type="text" name="telefone" id="telefone" autocomplete="telefone" placeholder="Telefone" class="cel form-control" maxlength="14" />
                                 <br>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <textarea name="mensagem" class="form-control" id="mensagem" autocomplete="Como podemos te ajudar?" placeholder="Como podemos te ajudar?" cols="30" rows="6" required data-error="Este campo é obrigatório."></textarea>
+                                <textarea name="mensagem" class="form-control" id="mensagem" autocomplete="Como podemos te ajudar?" placeholder="Como podemos te ajudar?" cols="30" rows="6" ></textarea>
                                 <br>
                                 <br>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
-                            <button type="submit" class="default-btn">
+                            <button type="button" class="default-btn" id="form-contato">
                                 <span>Enviar</span>
                             </button>
                             <br><br>
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -102,6 +101,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="assets-institucional/js/bootstrap.min.js"></script>
     <script src="assets-institucional/js/owl.carousel.min.js"></script>
+    <script src="assets/js/sweet-alert/sweetalert2.all.min.js"></script>
     <script src="assets/js/jquery.inputmask.min.js"></script>
     <script src="assets-institucional/js/contato.js"></script>
     <script>

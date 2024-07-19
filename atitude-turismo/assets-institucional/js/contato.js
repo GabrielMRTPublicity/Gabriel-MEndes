@@ -6,45 +6,41 @@ $(document).ready(function() {
         clearMaskOnLostFocus: true
     });
     //submit formulario simples
-    $('#form-cadastro').submit(function(event) {
+    $('#form-contato').click(function(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
 
-        var tipo = "CadastroExternoSimples"
         var nome = $('#nome').val();
         var email = $('#email').val();
         var whatsapp = $('#whatsapp').val();
-        var senha = $('#senha').val();
-        var confirmarSenha = $('#confirmar-senha').val();
+        var telefone = $('#telefone').val();
+        var mensagem = $('#mensagem').val();
 
-        if (nome == '' || email == '' || whatsapp == '' || senha == '' || confirmarSenha == '') {
+        if (nome == '' || email == '' || whatsapp == '' || mensagem  == '') {
             Swal.fire('Por favor, preencha todos os campos.');
             return;
         }
         const cleanNumber = whatsapp.replace(/\D/g, '');
-        if (cleanNumber.length < 10) {
+        const cleanNumber2 = telefone.replace(/\D/g, '');
+        if (cleanNumber.length < 9) {
             Swal.fire('Por favor, forneça um número de WhatsApp válido com DDD + 8 dígitos no mínimo.');
             return;
         }
-        if (senha != confirmarSenha) {
-            Swal.fire('As senhas precisam ser iguais.');
+        if (cleanNumber2.length < 9) {
+            Swal.fire('Por favor, forneça um número de Telefone válido com DDD + 8 dígitos no mínimo.');
             return;
         }
 
-        if (!$('#checkbox1').is(':checked')) {
-            Swal.fire('Por favor, concorde com a Política de Privacidade.');
-            return;
-        }
 
         var formData = {
-            tipo: tipo,
             nome: nome,
             email: email,
             whatsapp: whatsapp,
-            senha: senha
+            telefone: telefone,
+            mensagem: mensagem
         };
         $.ajax({
                 type: 'POST',
-                url: '../assets/php/cadastro.php',
+                url: 'assets-institucional/php/enviar_relatorio.php',
                 data: formData,
                 dataType: 'json',
                 encode: true
